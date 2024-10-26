@@ -8,7 +8,7 @@ spec:
     namespace: kafka-cluster-ns  # Target namespace for deployment
     server: https://kubernetes.default.svc
   source:
-    path: main # Path to your application manifests
+    path: helm # Path to your application manifests
     repoURL: https://github.com/findnanda/confluent-kafka-cluster-provisioner.git  # Git repository URL
     targetRevision: HEAD  # Branch, tag, or commit to deploy
     helm:
