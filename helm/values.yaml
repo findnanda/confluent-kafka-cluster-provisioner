@@ -1,0 +1,22 @@
+replicaCount:
+  kafka: 2
+  zookeeper: 1
+  schemaRegistry: 1
+
+image:
+  kafka: "confluentinc/cp-kafka:latest"  # Change to specific version if needed
+  zookeeper: "confluentinc/cp-zookeeper:latest"
+  schemaRegistry: "confluentinc/cp-schema-registry:latest"
+
+service:
+  kafka:
+    type: ClusterIP
+    port: 9092
+  zookeeper:
+    type: ClusterIP
+    port: 2181
+  schemaRegistry:
+    type: ClusterIP
+    port: 8081
+
+resources: {}

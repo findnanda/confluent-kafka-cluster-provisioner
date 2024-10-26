@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: zookeeper
+spec:
+  replicas: {{ .Values.replicaCount.zookeeper }}
+  selector:
+    matchLabels:
+      app: zookeeper
+  template:
+    metadata:
+      labels:
+        app: zookeeper
+    spec:
+      containers:
+        - name: zookeeper
+          image: {{ .Values.image.zookeeper }}
+          ports:
+            - containerPort: {{ .Values.service.zookeeper.port }}
+          env:
+            - name: ZOOKEEPER_CLIENT_PORT
+              value: "2181"
