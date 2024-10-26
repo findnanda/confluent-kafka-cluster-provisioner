@@ -11,9 +11,9 @@ spec:
     path: helm # Path to your application manifests
     repoURL: https://github.com/findnanda/confluent-kafka-cluster-provisioner.git  # Git repository URL
     targetRevision: main  # Branch, tag, or commit to deploy
-    helm:
-      valueFiles:
-        - helm/values.yaml  # Helm values file if using Helm charts
+#    helm:
+#      valueFiles:
+#        - values.yaml  # Helm values file if using Helm charts
   project: default  # Argo CD project
   syncPolicy:
     automated:
