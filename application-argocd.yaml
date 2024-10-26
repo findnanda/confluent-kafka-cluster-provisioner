@@ -13,7 +13,7 @@ spec:
     targetRevision: HEAD  # Branch, tag, or commit to deploy
     helm:
       valueFiles:
-        - values.yaml  # Helm values file if using Helm charts
+        - helm/values.yaml  # Helm values file if using Helm charts
   project: default  # Argo CD project
   syncPolicy:
     automated:
