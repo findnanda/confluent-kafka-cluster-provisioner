@@ -10,7 +10,7 @@ spec:
   source:
     path: helm # Path to your application manifests
     repoURL: https://github.com/findnanda/confluent-kafka-cluster-provisioner.git  # Git repository URL
-    targetRevision: HEAD  # Branch, tag, or commit to deploy
+    targetRevision: main  # Branch, tag, or commit to deploy
     helm:
       valueFiles:
         - helm/values.yaml  # Helm values file if using Helm charts
